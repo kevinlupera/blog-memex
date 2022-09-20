@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-memex"]
+	path = themes/hugo-theme-memex
+	url = https://github.com/victoriadrake/hugo-theme-memex.git

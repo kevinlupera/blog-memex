@@ -1,0 +1,30 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Kevin Lupera'
+theme = 'hugo-theme-memex'
+assetDir = 'themes/hugo-theme-memex/static'
+description = 'Este blog permite '
+[module]
+  [[module.imports]]
+    path = "github.com/victoriadrake/hugo-theme-memex"
+    disable = false
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
+[permalinks]
+  posts = '/:year/:month/:title/'
+enableGitInfo = true
+[menu]
+  [[menu.main]]
+    name = "hello"
+    url = "/"
+    pre = "<img src='/icon/bookmark.svg' alt='home page icon' height='18px' class='filter-icon'>"
+    weight = 1
+
+[params]
+  assetDir = 'themes/hugo-theme-memex/static'
+  Subtitle = 'Hugo is Absurdly Fast!'
+  Uri = "1"
+  [mainSections]
+    [[post]]
