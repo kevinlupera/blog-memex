@@ -1,6 +1,6 @@
-baseURL: https://victoria.dev/
+baseURL: https://kevin.dev/
 languageCode: en-us
-title: victoria.dev
+title: kevin.dev
 theme: hugo-theme-memex
 pygmentsCodeFences: true
 pygmentsUseClasses: true
@@ -16,30 +16,29 @@ permalinks:
 enableGitInfo: true
 
 author:
-  name: Victoria Drake
+  name: kevin Lupera
   image: img/victoria_headshot.jpeg
   about: Victoria Drake is an experienced software engineer with a background in technical and executive leadership.
-  email: hello@victoria.dev
-  domain: https://victoria.dev
+  email: hello@kevin.dev
+  domain: https://kevin.dev
 
 params:
   logo: img/logo.png
   dateFormat: January 2, 2006
   dateTime: "02 Jan 2006 15:04 MST"
   # customCSS: css/style.css # relative to ./static/
-  webmentionUrl: https://webmention.io/victoria.dev/webmention
-  pingbackUrl: https://webmention.io/victoria.dev/xmlrpc
+  # webmentionUrl: https://webmention.io/victoria.dev/webmention
+  # pingbackUrl: https://webmention.io/victoria.dev/xmlrpc
   # micropubUrl: https://example.com/.netlify/functions/micropub
   # microsubUrl: https://aperture.p3k.io/microsub/example
   # For IndieAuth
   githubuser: victoriadrake
   twitteruser: victoriadotdev
-  mastodon: https://mastodon.technology/@victoria
-  monetization: $ilp.uphold.com/pBRfRwg2EJAe
-  subscribeLink: https://api.victoria.dev/subscribe/
+  # mastodon: https://mastodon.technology/@victoria
+  # monetization: $ilp.uphold.com/pBRfRwg2EJAe
+  # subscribeLink: https://api.victoria.dev/subscribe/
   mainSections:
     - blog
-    - neofeed
   plausible: true
   rssTitle: Victoria Drake's Blog
   rssDescription: Get the latest posts from Victoria Drake.
@@ -108,26 +107,16 @@ outputFormats:
     rel: "alternate"
     isHTML: false
     permalinkable: false
-  Atom:
-    name: "Atom"
-    mediaType: "application/atom+xml"
-    baseName: "atom"
-    isPlainText: false
-    rel: "alternate"
-    isHTML: false
-    permalinkable: false
 
 outputs:
   home:
     - HTML
-    - ATOM
     - JSON
     - RSS
   page:
     - HTML
   blog:
     - HTML
-    - ATOM
     - RSS
     - EMAIL
   section:
@@ -138,7 +127,6 @@ outputs:
     - HTML
   term:
     - HTML
-    - ATOM
     - JSON
     - RSS
   wc:

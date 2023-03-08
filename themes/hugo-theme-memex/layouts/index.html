@@ -1,14 +1,25 @@
 {{ define "content" }}
 {{ partial "outputformats" . }}
 <div class="content">
-  <time class="hidden dt-published">{{ .Date }}</time>
+  <nav aria-label="article list" class="markdown">
+    <ul role="menubar" id="article-list" class="h-feed">
+      {{ .Site.Pages }}
+      {{ .Site }}
+      {{ (where .Site.Pages "Section" "blog" )}}
+        {{ range .Site.Pages }}
+        {{ partial "article-li" . }}
+        {{ end }}
+        {{ range (where .Site.Pages "Params.featured" true ) }}
+        {{ partial "article-li" . }}
+        {{ end }}
+    </ul>
+</nav>
+  <time class="dt-published">{{ .Date }}</time>
       <article class="md p-summary e-content">
-        <h2 class="hidden p-name">
+        <h2 class="p-name">
           {{ .Title }}
         </h2>
-        {{ if .Params.uri }}
         <a href="{{ .Params.uri }}" target="_blank">{{ .Params.uri }}</a>
-        {{ end }}
         {{ .Content }}
         <!-- Bridgy -->
         <a class="hidden" href="https://brid.gy/publish/mastodon"></a>

@@ -1,7 +1,7 @@
 <!-- feed h-entry: https://microformats.org/wiki/h-entry -->
 <li class="feed__li h-entry">
   <div class="feed__content">
-      <a class="p-name" href="{{ .Permalink }}">{{ .Title }}</a>
+      <a class="p-name" href="{{ .Permalink }}">titulo {{ .Title }}</a>
       <p class="properties">{{ .Summary }}{{ if .Summary }}...{{ end }}</p>
       <div class="flex properties__row  properties">
         <div class="flex left properties">
